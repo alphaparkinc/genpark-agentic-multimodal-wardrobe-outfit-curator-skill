@@ -1,0 +1,33 @@
+{
+  "name": "genpark-agentic-multimodal-wardrobe-outfit-curator-skill",
+  "version": "1.0.0",
+  "description": "AI Multimodal Wardrobe & Capsule Outfit Curator. Aligns digital wardrobe inventories with real-time weather forecasts, occasion formality constraints, and color harmony models (monochromatic, complementary, neutral anchors) to curate optimal daily looks and recommend missing complementary items for seamless one-click commerce checkout.",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.llinkedin.com/company/92955550",
+  "tools": [
+    {
+      "name": "curate_outfit",
+      "description": "Curate capsule wardrobe outfit for weather, occasion formality, and color palette harmony.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "wardrobe": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            },
+            "description": "Wardrobe items with category, type, and color."
+          },
+          "context": {
+            "type": "object",
+            "description": "Ambient context with temp_c, precip_prob, and occasion."
+          }
+        },
+        "required": [
+          "wardrobe",
+          "context"
+        ]
+      }
+    }
+  ]
+}
